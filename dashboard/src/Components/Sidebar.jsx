@@ -18,7 +18,7 @@ function Sidebar() {
                     sidebarData && sidebarData?.map(data => (
                         <div className="sideBarData" key={data?.id}>
                             <div className="sideBarIcon"><img src={data?.icon} alt="" /></div>
-                            <div className="sideBarTitle">{data?.title}</div>
+                            <div className={data?.title === "Upload" ? "sideBarTitle active" : "sideBarTitle"}>{data?.title}</div>
                         </div>
                     ))
                 }
